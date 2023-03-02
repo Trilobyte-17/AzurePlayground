@@ -6,6 +6,11 @@ module vnet'Vnet.bicep' = {
   }
 }
 
+module automation 'Automation.bicep' = {
+  name: 'OctopusAutomation'
+}
+
+/*
 module DC 'DC.bicep' = {
   name: 'DC'
   params: {
@@ -14,4 +19,5 @@ module DC 'DC.bicep' = {
     existingVnetName: vnet.outputs.vnetname
   }
 }
+*/
 
