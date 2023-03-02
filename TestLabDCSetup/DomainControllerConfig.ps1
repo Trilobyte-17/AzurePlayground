@@ -40,14 +40,14 @@ Required modules in Automation service:
 configuration DomainControllerConfig
 {
 
-Import-DscResource -ModuleName @{ModuleName = 'xActiveDirectory'; ModuleVersion = '2.17.0.0'}
-Import-DscResource -ModuleName @{ModuleName = 'xStorage'; ModuleVersion = '3.4.0.0'}
-Import-DscResource -ModuleName @{ModuleName = 'xPendingReboot'; ModuleVersion = '0.3.0.0'}
+Import-DscResource -ModuleName  'xActiveDirectory'
+Import-DscResource -ModuleName  'xStorage'
+Import-DscResource -ModuleName  'xPendingReboot'
 Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
 
 # When using with Azure Automation, modify these values to match your stored credential names
-$domainCredential = Get-AutomationPSCredential 'Credential'
-$safeModeCredential = Get-AutomationPSCredential 'Credential'
+$domainCredential = Get-AutomationPSCredential 'Domain Credental'
+$safeModeCredential = Get-AutomationPSCredential 'SafeMode Credental'
 
   node localhost
   {
