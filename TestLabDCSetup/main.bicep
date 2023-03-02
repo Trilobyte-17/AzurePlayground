@@ -8,6 +8,9 @@ module vnet'Vnet.bicep' = {
 
 module automation 'Automation.bicep' = {
   name: 'OctopusAutomation'
+  params:{
+    location: 'UKSouth'
+  }
 }
 
 /*
